@@ -86,15 +86,34 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+We're trying to solve for this equation:
+
+![eq1](https://latex.codecogs.com/gif.latex?P%28%5Ctext%7Bidentical%20twin%7D%7C%5Ctext%7Btwin%20brother%7D%29%20%3D%20%5Cfrac%7BP%28%5Ctext%7Bidentical%20twin%7D%20%5Ccap%20%5Ctext%7Btwin%20brother%7D%29%7D%7BP%28%5Ctext%7Btwin%20brother%7D%29%7D)
+
+At first, I had written the lefthand side as $P(\text{identical twin}|\text{twin})$, but there's an important distinction between the probability of twins and probability of twin boys. In the case of identical twins, you have either 2 boys (BB) or 2 girls (GG), so there's a 50% chance of having twin boys. In the case of fraternal twins, you have 2 boys (BB), 2 girls (GG), or 1 boy and 1 girl (BG and GB). In this scenario, there's a 25% chance of having twin boys. 
+
+If you use the equation I mistakenly wrote, you're essentially calculating the probability that Elvis and his twin was a set of female identical twins or a set of male identical twins. But we know that Elvis and his twin were boys.
+
+![eq2](https://latex.codecogs.com/gif.latex?P%28%5Ctext%7Bidentical%20twin%7D%20%5Ccap%20%5Ctext%7Btwin%20brother%7D%29%20%5C%5C%20%3D%20P%28%5Ctext%7Btwin%20brother%7D%20%5Ccap%20%5Ctext%7Bidentical%20twin%7D%29%20%5C%5C%20%3D%20P%28%5Ctext%7Btwin%20brother%7D%7C%5Ctext%7Bidentical%20twin%7D%29P%28%5Ctext%7Bidentical%20twin%7D%29%20%5C%5C%20%3D%20%28.5%29%5Cfrac%7B1%7D%7B300%7D)
+
+![eq2](https://latex.codecogs.com/gif.latex?P%28%5Ctext%7Btwin%20brother%7D%29%20%5C%5C%20%3D%20P%28%5Ctext%7Btwin%20brother%7D%20%5Ccap%20%5Ctext%7Bfraternal%20twin%7D%29%20&plus;%20P%28%5Ctext%7Btwin%20brother%7D%20%5Ccap%20%5Ctext%7Bidentical%20twin%7D%29%20%5C%5C%20%3D%20P%28%5Ctext%7Btwin%20brother%7D%20%5Ccap%20%5Ctext%7Bfraternal%20twin%7D%29P%28%5Ctext%7Bfraternal%20twin%7D%29%20&plus;%20P%28%5Ctext%7Btwin%20brother%7D%7C%5Ctext%7Bidentical%20twin%7D%29P%28%5Ctext%7Bidentical%20twin%7D%29%20%5C%5C%20%3D%20%28.25%29%5Cfrac%7B1%7D%7B125%7D%20&plus;%20%28.5%29%5Cfrac%7B1%7D%7B300%7D)
+
+`(.5/300)/(.25/125 + .5/300)` ~= .455
+
+The probability that Elvis was an identical twin was 45.5%.
 
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+In statistics, we often want to make statements about populations by sampling from them. Both frequentists and Bayesians have methods for making such statements, but differ on how to approach them. 
 
+Both frequentists and Bayesians agree that, for a given probability distribution, there are true and unknown paremeters. Frequentists believe that estimates of these unknown parameters should be based on observed frequencies, and that statements about a population must be as consistent with data samples as possible. They make point estimates of parameters. 
+
+Bayesians, on the other hand, take into account the uncertainty of these parameters in their estimates. They represent parameters probabilistically.
+
+As a result, these schools of thought use different techniques. For parameter estimation, frequentists use MLE, whereas Bayesians use Bayes Theorem to update their beliefs.
 ---
 
 ## <a name="section-e"></a>5.  Optional Exercises
