@@ -20,7 +20,7 @@ thinkplot.Pmfs([pmf,biased_pmf])
 thinkplot.Show(xlabel='Number of kids', ylabel='PMF')
 ```
 
-![Distribution graph](../../img/ex3-1_graph1)
+![Distribution graph](../../img/ex3-1_graph1.png)
 
 If you survey children, no respondent will tell you that there are 0 children in their family, even though there are families with no children. This surveying method would introduce significant bias to the study, and shows us that it's important to question how the data was obtained so that we can draw valid conclusions from the data.
 
