@@ -22,7 +22,7 @@ d = dif/np.sqrt(pooled_var)
 d
 ```
 
-When I ran the above code, d computed to -0.089. According to this data, first-born babies are lighter than not first-born babies by about .09 standard deviations. This is about three times the effect that being first-born has on pregnancy length.
+When I ran the above code, `d` computed to -0.089. According to this data, first-born babies are lighter than not first-born babies by about .09 standard deviations. This is about three times the effect that being first-born has on pregnancy length.
 
 ```python
 wks_first = preg.loc[is_first, 'prglngth']
